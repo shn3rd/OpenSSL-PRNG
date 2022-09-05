@@ -2,9 +2,9 @@
 
 OpenSSL 0.9.8c-1 < 0.9.8g-9 (Debian and Derivatives) - Predictable [PRNG](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) Brute Force SSH
 
-https://www.exploit-db.com/exploits/5622/ (Perl)
-https://www.exploit-db.com/exploits/5720/ (Python)
-https://www.exploit-db.com/exploits/5632/ (Ruby)
+1. https://www.exploit-db.com/exploits/5622/ (Perl)
+2. https://www.exploit-db.com/exploits/5720/ (Python)
+3. https://www.exploit-db.com/exploits/5632/ (Ruby)
 
 ## An example of SSH Key Predictable PRNG exploitation
 
