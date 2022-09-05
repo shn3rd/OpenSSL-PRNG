@@ -26,7 +26,7 @@ All SSL and SSH keys generated on Debian-based systems (Ubuntu, Kubuntu, etc) be
 #### Security Tools
 - [Hubert Seiwert's Remote Host Key Scanner](SalvagedArchives/Remote-host-key-scanner-for-Debian-SSH-updated-2008-05-16.md)
 - Sebastian Spitzner's Remote Host Key Scanner (v1)
-- Markus Mueller's Brute Force Perl Script
+- [Markus Mueller's Brute Force Perl Script](SalvagedArchives/Markus Mueller's Brute Force Perl Script.txt)
 - L4teral's Brute Force Ruby Script
 - CR0.org's Debian SSH/SSL Tools
 - Bootable SSL Certificate Generator (ISO)
