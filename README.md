@@ -2,8 +2,8 @@
 On May 13th, 2008 the Debian project announced that Luciano Bello found an interesting vulnerability in the OpenSSL package they were distributing. The bug in question was caused by the removal of the following line of code from md_rand.c
 ```c
   MD_Update(&m;,buf,j);
-	[ .. ]
-	MD_Update(&m;,buf,j); /* purify complains */
+  [ .. ]
+  MD_Update(&m;,buf,j); /* purify complains */
 ```
 These lines were removed because they caused the Valgrind and Purify tools to produce warnings about the use of uninitialized data in any code that was linked to OpenSSL. You can see one such report to the OpenSSL team here. Removing this code has the side effect of crippling the seeding process for the OpenSSL PRNG. Instead of mixing in random data for the initial seed, the only "random" value that was used was the current process ID. On the Linux platform, the default maximum process ID is 32,768, resulting in a very small number of seed values being used for all PRNG operations.
 ### The Impact
@@ -30,14 +30,16 @@ All SSL and SSH keys generated on Debian-based systems (Ubuntu, Kubuntu, etc) be
 The blacklists published by Debian and Ubuntu demonstrate just how small the key space is. When creating a new OpenSSH key, there are only 32,767 possible outcomes for a given architecture, key size, and key type. The reason is that the only "random" data being used by the PRNG is the ID of the process. In order to generate the actual keys that match these blacklists, we need a system containing the correct binaries for the target platform and a way to generate keys with a specific process ID. To solve the process ID issue, I wrote a shared library that could be preloaded and that returns a user-specified value for the getpid() libc call.
 
 The next step was to build a chroot environment that contained the actual binaries and libraries from a vulnerable system. I took a snapshot from a Ubuntu system on the local network. You can find the entire chroot environment here In order to generate an OpenSSH key with a specific type, bit count, and process ID, I wrote a shell script that could be executed from within the chroot environment. You can find this shell script here. This script is placed into the root directory of the extracted Ubuntu filesystem. In order to generate a key, this script is called with the following command line:
-# chroot ubunturoot /dokeygen.sh 1 -t dsa -b 1024 -f /tmp/dsa_1024_1
+```shell
+ # chroot ubunturoot /dokeygen.sh 1 -t dsa -b 1024 -f /tmp/dsa_1024_1
+```
 This will generate a new OpenSSH 1024-bit DSA key with the value of getpid() always returning the number "1". We now have our first pre-generated SSH key. If we continue this process for all PIDs up to 32,767 and then repeat it for 2048-bit RSA keys, we have covered the valid key ranges for x86 systems running the buggy version of the OpenSSL library. With this key set, we can compromise any user account that has a vulnerable key listed in the authorized_keys file. This key set is also useful for decrypting a previously-captured SSH session, if the SSH server was using a vulnerable host key. Links to the pregenerated key sets for 1024-bit DSA and 2048-bit RSA keys (x86) are provided in the downloads section below.
 
 The interesting thing about these keys is how they are tied to the process ID. Since most Debian-based systems use sequential process ID values (incrementing from system boot and wrapping back around as needed), the process ID of a given key can also indicate how soon from the system boot that key was generated. If we look at the inverse of that, we can determine which keys to use during a brute force based on the target we are attacking. When attempting to guess a key generated at boot time (like a SSH host key), those keys with PID values less than 200 would be the best choices for a brute force. When attacking a user-generated key, we can assume that most of the valid user keys were created with a process ID greater than 500 and less than 10,000. This optimization can significantly speed up a brute force attack on a remote user account over the SSH protocol.
 
 In the near future, this site will be updated to include a brute force tool that can be used quickly gain access to any SSH account that allows public key authentication using a vulnerable key. The keys in the data files below use the following naming convention:
 ```shell
-/ Algorithm / Bits / Fingerprint-ProcessID
+ / Algorithm / Bits / Fingerprint-ProcessID
    and
  / Algorithm / Bits / Fingerprint-ProcessID.pub  
 ```
@@ -48,11 +50,11 @@ To obtain the private key file for any given public key, you need to know the ke
 ```
 If we look at the public key in an editor, we can also infer that the key type is RSA. In order to locate the private key for this public key, we need to extract the data files, and look for a file named:
 ```shell
-rsa/2048/c67b14faaeb689e66717ee0417b0ec4e-26670
+ rsa/2048/c67b14faaeb689e66717ee0417b0ec4e-26670
 ```
 In the example above, the fingerprint is represented in hexadecimal with the colons removed, and the process ID is indicated as "26670". If we want to authenticate to a vulnerable system that uses this public key for authentication, we would run the following command:
 ```shell
-$ ssh -i rsa/2048/c67b14faaeb689e66717ee0417b0ec4e-26670 root@targetmachine
+ $ ssh -i rsa/2048/c67b14faaeb689e66717ee0417b0ec4e-26670 root@targetmachine
 ```
 #### Our Tools
 - GetPID Faker Shared Library (4.0K)
