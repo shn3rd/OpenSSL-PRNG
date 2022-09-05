@@ -1,6 +1,6 @@
 # Debian OpenSSL Predictable PRNG Exploitation
 
-This is an integrated repo included the exploitation, usage example, data package and explanation, more.
+This is an integrated repository included the exploitation, usage example, data package and explanation, more.
 
 ![DebianCartoonHeader](Archives/DebianCartoonHeader.jpg)
 
