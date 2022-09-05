@@ -1,3 +1,11 @@
+## expoits
+
+Exploit:
+
+https://www.exploit-db.com/exploits/5622/ (Perl)
+https://www.exploit-db.com/exploits/5720/ (Python)
+https://www.exploit-db.com/exploits/5632/ (Ruby)
+
 ## An example of SSH Key Predictable PRNG exploitation
 
 Bruteforce the the private key using the data package when authorized_keys in hand.
