@@ -1,4 +1,9 @@
 # Debian OpenSSL Predictable PRNG Toys 
+
+
+![DebianCartoon1](SalvagedArchives/DebianCartoon1.jpg)
+
+![DebianCartoon2](SalvagedArchives/DebianCartoon2.jpg)
 ### The Bug
 On May 13th, 2008 the Debian project [announced](http://www.debian.org/security/2008/dsa-1571) that Luciano Bello found an interesting vulnerability in the OpenSSL package they were distributing. The bug in question was caused by the removal of the following line of code from md_rand.c
 ```c
