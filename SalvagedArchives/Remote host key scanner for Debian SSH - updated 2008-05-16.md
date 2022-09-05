@@ -1,11 +1,13 @@
 Remote host key scanner for Debian SSH - updated 2008-05-16
 
+![random_number.png](./random_number.png)
+
 [debian_ssh_scan_v4.tar.bz2]() [3.8 MB] (SHA1 0d82ffbbb980000b804cacfad1925f9242471a83)
 
 Now includes fingerprints of all weak DSA 1024 + RSA 2048 and RSA 1023 / 1024 / 2047 / 4096 / 8192 bit keys (201691 fingerprints in total).
 
 Runs multi-threaded if a list of targets is supplied on stdin.
-
+```python
 # debian_ssh_scan.py v4
 #
 # Remote check for weak Debian sshd host keys (CVE-2008-0166, http://www.debian.org/security/2008/dsa-1571) by Hubert Seiwert 2008-05-16.
@@ -23,6 +25,7 @@ Runs multi-threaded if a list of targets is supplied on stdin.
 # 127.0.0.1:22 sshd fingerprint 97382c98fe3d45fa779abd34bb65fb73 VULNERABLE (RSA 2048 bit key, pid 5214)
 # 10.128.62.4:22 sshd fingerprint 9cf71acb1b0dff0dceef4f755f721e9d VULNERABLE (RSA 2048 bit key, pid 5252)
 # test.ath.cx:9822 sshd fingerprint 3343c8ec72712a6b2ceee10ef1785e84 unknown
+```
 Requires the [paramiko](http://web.archive.org/web/20110718173934/http://www.lag.net/paramiko/) python ssh module.
 
 Contact: hubert at itsecurity.net.
