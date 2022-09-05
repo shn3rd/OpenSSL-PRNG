@@ -10,7 +10,7 @@ OpenSSL 0.9.8c-1 < 0.9.8g-9 (Debian and Derivatives) - Predictable [PRNG](https:
 2. https://www.exploit-db.com/exploits/5720/ (Python)
 3. https://www.exploit-db.com/exploits/5632/ (Ruby)
 
-## An example of SSH Key Predictable PRNG exploitation
+## The usage example of SSH Key Predictable PRNG exploitation
 
 Bruteforce the the private key using the data package when authorized_keys in hand.
 
