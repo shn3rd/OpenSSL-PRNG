@@ -23,7 +23,7 @@ ssh-dss AAAAB3NzaC1kc3MAAACBAOgzzMCD3Im5bRnAVdV3yLwTsyNAi3IiFShIfx9bUcUNmyFDM7Sa
 Get the debian SSH repo:
 
 ```
-git clone https://github.com/g0tmi1k/debian-ssh
+git clone https://github.com/shn3rd/Debian-OpenSSL-Predictable-PRNG
 tar vjxf debian-ssh/common_keys/debian_ssh_dsa_1024_x86.tar.bz2
 ```
 
