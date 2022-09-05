@@ -24,7 +24,7 @@ All SSL and SSH keys generated on Debian-based systems (Ubuntu, Kubuntu, etc) be
 - [OpenSSH Key Blacklist](https://launchpad.net/ubuntu/+source/openssh-blacklist)
 - [OpenVPN Key Blacklist](https://launchpad.net/ubuntu/+source/openvpn-blacklist)
 #### Security Tools
-- [Hubert Seiwert's Remote Host Key Scanner](SalvagedArchives/Remote host key scanner for Debian SSH - updated 2008-05-16.md)
+- [Hubert Seiwert's Remote Host Key Scanner](SalvagedArchives/Remote-host-key-scanner-for-Debian-SSH-updated-2008-05-16.md)
 - Sebastian Spitzner's Remote Host Key Scanner (v1)
 - Markus Mueller's Brute Force Perl Script
 - L4teral's Brute Force Ruby Script
