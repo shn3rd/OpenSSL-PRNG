@@ -1,3 +1,4 @@
+# Debian OpenSSL Predictable PRNG Exploitation
 ## exploit
 
 OpenSSL 0.9.8c-1 < 0.9.8g-9 (Debian and Derivatives) - Predictable [PRNG](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) Brute Force SSH
