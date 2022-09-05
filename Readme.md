@@ -1,6 +1,6 @@
-## SSH Key Predictable PRNG (Authorized_Keys) Process
+## An example of SSH Key Predictable PRNG exploitation
 
-Bruteforce the the private key using the g0tmi1k's debian-ssh data package when authorized_keys in hand.
+Bruteforce the the private key using the data package when authorized_keys in hand.
 
 The authorized_keys file will be something like (ssh-dss ....):
 
