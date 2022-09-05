@@ -1,6 +1,6 @@
 # Debian OpenSSL Predictable PRNG Exploitation
 
-The is an integrated repo included the exploitation, usage example, data package and explanation, more. Pay tribute to HD Moore and thanks @g0tmi1k
+The is an integrated repo included the exploitation, usage example, data package and explanation, more.
 
 ## Exploitations
 
@@ -132,3 +132,6 @@ Q: I use 16384-bit RSA keys, can these be broken?
 A: Yes, its just a matter of time and processing power. The 8192-bit RSA keyset would take about 3100 hours of CPU time to generate all 32,767 keys (100 hours on the 31 cores im using now). I imagine the 16384-bit RSA keyset would take closer to 100,000 hours of CPU time. One thing to keep in mind is that most keys are within a much smaller range, based on the process ID seed, and the entire set would not need to be generated to cover the majority of user keys (most keys are within the first 3,000 process IDs).
 
 Copyright © 2008 HD Moore [Original](http://metasploit.com/users/hdm/tools/debian-openssl/)(unlinked) ([Mirror](http://web.archive.org/web/20110723091928/http://digitaloffense.net/tools/debian-openssl/))
+
+ Pay tribute to HD Moore and thanks @g0tmi1k
+ 
