@@ -67,7 +67,7 @@ In the example above, the fingerprint is represented in hexadecimal with the col
 - Key Generation Script (8.0K)
 #### Common Keys
 - [SSH 1024-bit DSA Keys X86 (30.0M)](CommonKeys/debian_ssh_dsa_1024_x86.tar.bz2)
-- [SSH 2048-bit RSA Keys X86] (48.0M)](CommonKeys/debian_ssh_rsa_2048_x86.tar.bz2)
+- [SSH 2048-bit RSA Keys X86 (48.0M)](CommonKeys/debian_ssh_rsa_2048_x86.tar.bz2)
 #### Uncommon Keys
 - [SSH 1023-bit RSA Keys X86 (25.0M)](UncommonKeys/debian_ssh_rsa_1023_x86.tar.bz2)
 - [SSH 1024-bit RSA Keys X86 (26.0M)](UncommonKeys/debian_ssh_rsa_1024_x86.tar.bz2)
