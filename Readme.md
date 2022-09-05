@@ -1,8 +1,8 @@
 # Debian OpenSSL Predictable PRNG Exploitation
 
-The is an integrated repo included the exploitation, usage example, data package and explanation, more.Pay tribute to HD Moore and thanks @g0tmi1k
+The is an integrated repo included the exploitation, usage example, data package and explanation, more. Pay tribute to HD Moore and thanks @g0tmi1k
 
-## exploitation
+## Exploitations
 
 OpenSSL 0.9.8c-1 < 0.9.8g-9 (Debian and Derivatives) - Predictable [PRNG](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) Brute Force SSH
 
