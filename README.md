@@ -125,9 +125,8 @@ In the example above, the fingerprint is represented in hexadecimal with the col
 - [SSH RSA1 Keys X86 (139.0M)](UncommonKeys/debian_ssh_rsa1_x86.tar.bz)
 
 ### Frequently Asked Questions
-**Q**: How long did it take to generate these keys?
-
-**A**: I used 31 Xeon cores clocked at 2.33Ghz. It took two hours to generate the 1024-bit DSA and 2048-bit RSA keys for x86. The 4096-bit RSA keys took about 6 hours to generate. The 8192-bit RSA key generation would take about 100 hours at its current rate and will likely be stopped before completion.
+####Q: How long did it take to generate these keys?
+A: I used 31 Xeon cores clocked at 2.33Ghz. It took two hours to generate the 1024-bit DSA and 2048-bit RSA keys for x86. The 4096-bit RSA keys took about 6 hours to generate. The 8192-bit RSA key generation would take about 100 hours at its current rate and will likely be stopped before completion.
 
 **Q**: Will you share your code for distributing the key-generation across mulitple processors?
 
