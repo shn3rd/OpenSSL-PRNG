@@ -66,15 +66,15 @@ In the example above, the fingerprint is represented in hexadecimal with the col
 - [Ubuntu Root Filesystem (4.9M)](Tools/ubunturoot.tar.bz2)
 - Key Generation Script (8.0K)
 #### Common Keys
-- SSH 1024-bit DSA Keys X86 (30.0M)
-- SSH 2048-bit RSA Keys X86 (48.0M)
+- [SSH 1024-bit DSA Keys X86 (30.0M)](CommonKeys/debian_ssh_dsa_1024_x86.tar.bz2)
+- [SSH 2048-bit RSA Keys X86] (48.0M)](CommonKeys/debian_ssh_rsa_2048_x86.tar.bz2)
 #### Uncommon Keys
-- SSH 1023-bit RSA Keys X86 (25.0M)
-- SSH 1024-bit RSA Keys X86 (26.0M)
-- SSH 2047-bit RSA Keys X86 (48.0M)
-- SSH 4096-bit RSA Keys X86 (94.0M)
-- SSH 8192-bit RSA Keys X86 (PID 1 to 4100+) (29.0M)
-- SSH RSA1 Keys X86 (139.0M)
+- [SSH 1023-bit RSA Keys X86 (25.0M)](UncommonKeys/debian_ssh_rsa_1023_x86.tar.bz2)
+- [SSH 1024-bit RSA Keys X86 (26.0M)](UncommonKeys/debian_ssh_rsa_1024_x86.tar.bz2)
+- [SSH 2047-bit RSA Keys X86 (48.0M)](UncommonKeys/debian_ssh_rsa_2047_x86.tar.bz2)
+- [SSH 4096-bit RSA Keys X86 (94.0M)](UncommonKeys/debian_ssh_rsa_4096_x86.tar.bz2)
+- [SSH 8192-bit RSA Keys X86 (PID 1 to 4100+) (29.0M)](UncommonKeys/debian_ssh_rsa_8192_1_4100_x86.tar.bz2)
+- [SSH RSA1 Keys X86 (139.0M)](UncommonKeys/debian_ssh_rsa1_x86.tar.bz)
 
 ### Frequently Asked Questions
 Q: How long did it take to generate these keys?
