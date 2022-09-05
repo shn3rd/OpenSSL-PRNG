@@ -29,7 +29,7 @@ All SSL and SSH keys generated on Debian-based systems (Ubuntu, Kubuntu, etc) be
 - [Markus Mueller's Brute Force Perl Script](SalvagedArchives/Markus-Mueller's-Brute-Force-Perl-Script.txt)
 - L4teral's Brute Force Ruby Script
 - [CR0.org's Debian SSH/SSL Tools](https://www.cr0.org/progs/sshfun/)
-- Bootable SSL Certificate Generator (ISO)
+- [Bootable SSL Certificate Generator (ISO)](SalvagedArchives/sslbreak.iso)
 
 ### The Toys
 The blacklists published by Debian and Ubuntu demonstrate just how small the key space is. When creating a new OpenSSH key, there are only 32,767 possible outcomes for a given architecture, key size, and key type. The reason is that the only "random" data being used by the PRNG is the ID of the process. In order to generate the actual keys that match these blacklists, we need a system containing the correct binaries for the target platform and a way to generate keys with a specific process ID. To solve the process ID issue, I wrote a [shared library](http://metasploit.com/users/hdm/tools/getpid-preload.tar.gz) that could be preloaded and that returns a user-specified value for the getpid() libc call.
