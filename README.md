@@ -10,6 +10,12 @@ OpenSSL 0.9.8c-1 < 0.9.8g-9 (Debian and Derivatives) - Predictable [PRNG](https:
 + https://www.exploit-db.com/exploits/5720/ (Python)
 + https://www.exploit-db.com/exploits/5632/ (Ruby)
 
+CVE (CVE-2008-0166):
++ http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-0166
++ https://security-tracker.debian.org/tracker/CVE-2008-0166
++ https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2008-0166
++ https://www.cvedetails.com/cve/CVE-2008-0166
+
 ## The usage example of SSH Key Predictable PRNG exploitation
 
 Bruteforce the the private key using the data package when authorized_keys in hand.
