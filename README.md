@@ -2,6 +2,8 @@
 
 This is an integrated repo included the exploitation, usage example, data package and explanation, more.
 
+![DebianCartoon](Archives/DebianCartoon.png)
+
 ## Exploitations
 
 OpenSSL 0.9.8c-1 < 0.9.8g-9 (Debian and Derivatives) - Predictable [PRNG](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) Brute Force SSH
@@ -47,9 +49,6 @@ kali@kali:$ sudo ssh -i f1fb2162a02f0f7c40c210e6167f05ca-16858  bob@10.11.1.136
 ```
 
 ## Debian OpenSSL Predictable PRNG Toys 
-
-
-![DebianCartoon](Archives/DebianCartoon.png)
 
 ### The Bug
 On May 13th, 2008 the Debian project [announced](http://www.debian.org/security/2008/dsa-1571) that Luciano Bello found an interesting vulnerability in the OpenSSL package they were distributing. The bug in question was caused by the removal of the following line of code from md_rand.c
