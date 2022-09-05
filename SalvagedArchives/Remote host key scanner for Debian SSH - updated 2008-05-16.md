@@ -2,7 +2,7 @@
 
 ![random_number.png](./random_number.png)
 
-[debian_ssh_scan_v4.tar.bz2](SalvagedArchives/debian_ssh_scan_v4.tar.bz2) [3.8 MB] (SHA1 0d82ffbbb980000b804cacfad1925f9242471a83)
+[debian_ssh_scan_v4.tar.bz2](/debian_ssh_scan_v4.tar.bz2) [3.8 MB] (SHA1 0d82ffbbb980000b804cacfad1925f9242471a83)
 
 Now includes fingerprints of all weak DSA 1024 + RSA 2048 and RSA 1023 / 1024 / 2047 / 4096 / 8192 bit keys (201691 fingerprints in total).
 
